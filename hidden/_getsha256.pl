@@ -9,6 +9,7 @@ while (1) {
 	$hex=$1;
 	if ($hex ne $prev) {
 	    `echo -n "$hex" >> random-hex.txt`;
+	    `echo -n "$hex" > /dev/urandom`;
 	}
 	$prev=$hex;
     }

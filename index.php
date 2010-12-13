@@ -30,8 +30,7 @@ if (strlen($hexstring) != 8) {
 }
 
 $number=hexdec($hexstring);
-if ($number > 2147483647) $number-=2147483647;
-print 'true:'.$number.":2147483647";
+print 'true:'.$number.":4294967295"; # HEX:FFFFFFFF = DEC:4294967295
 
 $ret=mysql_query('UNLOCK TABLES',$link);
 if (!$ret) {
